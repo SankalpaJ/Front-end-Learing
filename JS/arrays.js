@@ -101,6 +101,17 @@ let words = ["Hello", "World"];
 let sent = words.join(" ");
 console.log(sent);   // Hello World
 
+// checking palidome or not using d/f methods
+let x = prompt("Enter a number");
+let org = x;
+let split_arr = x.split('');
+let rev_arr = split_arr.reverse();
+rev_arr = rev_arr.join();
 
+if(org == rev_arr){
+  console.log("its a palidrome.");
+} else {
+  console.log("its not a palidrome.")
+}
 
 

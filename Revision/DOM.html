@@ -1,0 +1,41 @@
+<!--
+   1) DOM -- doc object model
+   2) in order to modify or change d content or style we use DOM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="title">Hello</h1>
+    <h1>Hello</h1>
+    <h1 class="heading">Hello</h1>
+    <h1 class="heading">Hello</h1>
+    <p>Paragraph</p>
+
+    <button onclick="change()">change</button>
+    <script>
+        function change() {
+       const h =  document.getElementsByTagName("h1");
+       for(i=0; i<h.length; i++){
+        h[i].style.color = "red";
+        h[i].style.backgroundColor = "yellow";
+       }
+
+       document.getElementById("title").style.fontSize = "40px";
+
+       document.getElementsByClassName("heading")[1].style.color = "blue";
+    }
+
+    document.querySelector("h1").style.backgroundColor= "cyan";
+    let hi = document.querySelectorAll("h1");
+    for(i=0; i<hi.length; i++){
+        hi[i].style.backgroundColor = "cyan";
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!-- 1) flex-box is nothing but "layout"
+         it is used to deal with only rows 1D
+     2) Grid is used to deal with 2D.
+     nrml box will act as when we give as
+           "display: flex";
+           "display: grid";
+2) All parent = container ==> this given to parent
+                         "display: flex" 
+                         "flex-direction: column/row,row-revrse/col-rev"  default is  "row"
+                         "justify-content: center"   to align horizantally default is flex-start
+                         "align-item: "         to align vertically
+                         "flex-wrap: wrap"    when we have multiple ele every ele will be within screen not go outside screen
+                                                default is "nowrap".
+                         "align-content: flex-start,end etc"    use only within flex-wrap
+                         "gap:10px"  
+3) All child  = stores
+           "flex-grow: 1,2,3"    insted of using "px" bcz it z fixed, so use "%" or "grow" to make responsive use this.
+           "flex-shrink: "
+           "flex-bases: 100px "   start/inital size of item based on this flex-grow
+           "align-self: "       to align child
+           "order: 1"      default small to large
+
+4) The Problem: What Issues Does Flexbox Solve?
+Before Flexbox, web developers used methods like:
+
+Tables: People used tables to align content, which was messy and hard to maintain.
+
+Floats: Floats helped in placing elements side-by-side, but they often broke layouts.
+
+Margins and Padding: Developers tried to align things with margins, but it was time-consuming and inconsistent across different screen sizes.
+
+Vertical Alignment: Aligning things vertically was particularly frustrating—a common struggle for many developers.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Playground</title>
+  <style>
+
+    .container {
+      display: flex;
+      border: 2px solid black;
+      height: 200px;
+      width: 600px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .item {
+      background: lightblue;
+      border: 1px solid blue;
+      padding: 20px;
+      margin: 5px;
+      text-align: center;
+      font-weight: bold;
+      height: 10px;
+    }
+
+    .a { order: 3; }  /* Show last */
+    .b { order: 1; }  /* Show first */
+    .c { order: 2; }  /* Show second */
+  </style>
+</head>
+<body>
+
+  <h1> Flexbox Playground</h1>
+  <p>Edit the CSS and refresh to see how Flexbox changes layout!</p>
+
+  <h2>1. Default (Row)</h2>
+  <div class="container" style="flex-direction: row;">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <h2>2. Column Direction</h2>
+  <div class="container" style="flex-direction: column;">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <h2>3. Justify Content (space-around) horizontal</h2>
+  <div class="container" style="justify-content: space-around;">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <h2>4. Align Items (center) vertically</h2>
+  <div class="container" style="align-items: center;">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <h2>5. Flex Grow (auto resize)</h2>
+  <div class="container">
+    <div class="item" style="flex-grow: 1;">A</div>
+    <div class="item" style="flex-grow: 2;">B</div>
+    <div class="item" style="flex-grow: 1;">C</div>
+  </div>
+
+  <h2>6. Different Flex-basis</h2>
+  <div class="container">
+    <div class="item" style="flex-basis: 100px;">A (100px)</div>
+    <div class="item" style="flex-basis: 200px;">B (200px)</div>
+    <div class="item" style="flex-basis: 50px;">C (50px)</div>
+  </div>
+
+  <h2>7. Flex-basis with Flex-grow</h2>
+  <div class="container">
+    <div class="item" style="flex: 1 100px;">A (basis 100px, grow 1)</div>
+    <div class="item" style="flex: 2 200px;">B (basis 200px, grow 2)</div>
+    <div class="item" style="flex: 1 50px;">C (basis 50px, grow 1)</div>
+  </div>
+
+  <h2>8. Percentage Flex-basis</h2>
+  <div class="container">
+    <div class="item" style="flex-basis: 30%;">A (30%)</div>
+    <div class="item" style="flex-basis: 40%;">B (40%)</div>
+    <div class="item" style="flex-basis: 30%;">C (30%)</div>
+  </div>
+
+  <h2>9. Flex warp</h2>
+  <div class="container" style="flex-wrap: wrap; align-content: space-around;">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+  <h2>10. Flexbox Order Example</h2>
+
+  <div class="container">
+    <div class="item a">A (order 3)</div>
+    <div class="item b">B (order 1)</div>
+    <div class="item c">C (order 2)</div>
+  </div>
+
+  <h2>11. Align self </h2>
+  <div class="container">
+    <div class="item a" style="align-self: center;">A</div>
+    <div class="item b" style="align-self: flex-start;">B</div>
+    <div class="item c" style="align-self: flex-end;">C</div>
+  </div>
+
+</body>
+</html>

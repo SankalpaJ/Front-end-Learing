@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations in CSS</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+            animation-name: changecolor;
+            animation-duration: 10s;
+        }
+        h1 {
+            animation-name: slideIn;
+            animation-duration: 5s;
+        }
+        /* @keyframes changecolor {
+            from {background-color: white;}
+            to {background-color: black;}
+        } */
+         @keyframes changecolor {
+            0% {background-color: white;}
+            20% {background-color: blue;}
+            40% {background-color: greenyellow;}
+            60% {background-color: rgb(183, 0, 255);}
+            80% {background-color: pink;}
+            100% {background-color: black;}
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes slideIn {
+        0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        }
+        100% {
+        transform: translateX(50%);
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+    <div></div>
+    <h1>Offer !</h1>
+</body>
+</html>

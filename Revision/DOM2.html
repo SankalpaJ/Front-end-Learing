@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="heading">Pick One Fruit</h1>
+    <ul>
+        <input type=radio name="ra" value="mango">Mango   <br><br>
+        <input type=radio name="ra" value="apple">Apple   <br><br>
+        <input type=radio name="ra" value="banana">Banana   <br><br>
+        <input type=radio name="ra" value="kiwi">Kiwi
+    </ul>
+    <button onclick="sub()">submit</button>
+    <script>
+        function sub() {
+       let tit =  document.getElementById("heading");
+            tit.style.backgroundColor="pink";
+            tit.style.color="blue";
+    
+           const rad =  document.getElementsByName("ra");
+           for(let i = 0; i < rad.length; i++) {
+            rad[i].style.color="rgb(183, 0, 255)";
+            rad[i].style.fontSize="20px";
+           if(rad[i].checked) {
+           alert("You choosed " + rad[i].value);
+           return;
+        } 
+           }
+        alert("You choose empty item!!!");
+    }
+    
+
+    </script>
+    
+</body>
+</html>

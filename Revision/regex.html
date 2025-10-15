@@ -1,0 +1,57 @@
+<!-- pattren: 
+             . => any no of char
+             \. => nrml dot it removes spl feature of .
+             - => it acts as range like [A-Z]
+             \- => nrml minus
+             ^ => start
+              $ => end
+              [] => A-Za-z &  spl char
+        \d or [0-0] => digits
+            {}  => range, we can specify "min" & "max"
+            {2} => exact no of char
+            {2,3} => min, max
+            {2,} => min, 'n' no of max
+            ?=   => look-ahead [look forword in string]
+            *    => mutiple repetations or any num of times
+
+ex: Name     => "^[A-Za-z]{0,50}$"
+    titleCase => "^[A-Z]{1}[a-z]{1,49}"
+-->
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form>
+        <label for="un">USer Name: </label>
+        <input type="text" id="un" pattern="^[A-Z]{1}[a-z]{1,30}$" name="username" placeholder="enter ur name">
+        <br>
+        <br>
+        <label for="ph">Phone no:</label>
+        <input type="text" id="ph" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" name="ph" placeholder="enter ur phone number"
+             title="123-234-2345">  
+<!-- to validate indian phn no "^[6-9]{1}[0-9]{2}-[0-9]{3}-[0-9]{4}$"-->
+<br>
+<br>
+
+<label for="em">Email:</label>
+<input type="text" id="em" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" name="email"
+     placeholder="gamana.rs@gmail.com">
+<!--gamana@kodnest.com => "^.+@kodnest+\.[A-Z][a-z]{2,}$"-->
+<br>
+<br>
+
+<label for="pwd">Password:</label>
+<input type="password" id="pwd" title="234ASERd#dnr#"
+      pattern="^(?=(.*\d){2,})(?=(.*[A-Z]){2,})(?=(.*[a-z]){1})(?=.*[!#%*])[A-Za-z\d!#$%*]{10,}$">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- used to represent the ele in row-column ways.
+      grids are block-level
+      flex are inline level
+    all grid items are responsve & flex items are not responsve
+    inside properties/items are defined using flex propertis
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple CSS Grid Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr; /* 3 equal columns */
+      grid-template-rows: 1fr 1fr 1fr;         /* 3 equal rows */
+      gap: 10px; /* space between cells */
+      border: 2px solid black;
+      padding: 10px;
+      height: 800px;
+    }
+
+    .grid-item {
+      background: lightcoral;
+      border: 1px solid darkred;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bolder;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1>Simple CSS Grid Example</h1>
+
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+
+</body>
+</html>
