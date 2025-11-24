@@ -13,29 +13,31 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Sankalpa J</div>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">My Works</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#works">My Works</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="info">
-      <h3>Hello, I’m <span>Sankalpa J</span></h3>
-      <h1><span>F</span>ullstack <span>D</span>eveloper</h1>
+      <h3>Hello, I'm <span>Sankalpa J</span></h3>
+      <h1><span>F</span>rontend <span>D</span>eveloper</h1>
       <p>
-        Full-stack developer skilled in frontend, backend, databases, and APIs;<br>
-        passionate about building scalable, user-focused web applications.
+        BE Graduate in Computer Science & Engineering (2025). I am passionate about 
+        designing clean, responsive, and user-friendly interfaces. Skilled in HTML, CSS, 
+        JavaScript, React, Git, and responsive web development.
       </p>
-      <a href="#" class="btn">Hire Me</a>
+      <a href="#contact" class="btn">Hire Me</a>
     </div>
 
     <div class="image">
@@ -43,11 +45,53 @@
     </div>
   </section>
 
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Frontend Developer with strong knowledge in building interactive, 
+      modern web applications. I enjoy solving problems and creating intuitive digital 
+      experiences. I completed my BE in Computer Science & Engineering in 2025.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>React JS</li>
+      <li>Git & GitHub</li>
+      <li>Responsive Web Design</li>
+    </ul>
+  </section>
+
+  <!-- My Works -->
+  <section class="works" id="works">
+    <h2>My Projects</h2>
+    <div class="work-container">
+      <div class="work-card">Calculator</div>
+      <div class="work-card">Quiz App</div>
+      <div class="work-card">To-Do List</div>
+      <div class="work-card">HTML Projects</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: sankalpaj@example.com</p>
+    <p>Location: Bangalore, India</p>
+  </section>
+
   <!-- Social Icons -->
   <div class="icons">
     <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
     <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
   </div>
+
 </body>
 </html>

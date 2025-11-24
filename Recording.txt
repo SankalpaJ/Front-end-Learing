@@ -24,7 +24,7 @@ HOSTING STEPS:
          it shows 0 vulnerablites
    -> in package.json paste(url)"homepage": "https://github.com/SankalpaJ/Front-end-Learing"
    -> this 2 lines in same file(script{}) block
-              "predeploy": "npm run build",
+              "predeploy": pm run build",
                "deploy": "gh-pages -d dist"  
 
     -> in "vite.config.js" add in line7(base: '/Front-end-Learing/',   // must be ur repo name of github)
