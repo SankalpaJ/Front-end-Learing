@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Position Examples (Animated + Color Coded)</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #f9fafc;
+}
+
+/* Shared styling */
+figure {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 40px 0;
+  position: relative;
+  height: 140px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: white;
+}
+figcaption {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+.box {
+  width: 130px;
+  height: 70px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  animation: float 2s infinite alternate;
+}
+
+/* Floating animation for visual movement */
+@keyframes float {
+  from { transform: translateY(0px); }
+  to { transform: translateY(10px); }
+}
+
+/* Position examples */
+.static {
+  position: static;
+  background: #6c63ff;
+}
+
+.relative {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  background: #00b894;
+}
+
+.container {
+  position: relative;
+  background: #f1f2f6;
+}
+.absolute {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #fdcb6e;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #d63031;
+  z-index: 999;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background: #0984e3;
+  border: 2px solid #0652dd;
+}
+
+.spacer {
+  height: 600px;
+}
+</style>
+</head>
+<body>
+
+<figure>
+  <figcaption>1️⃣ position: static (default)</figcaption>
+  <div class="box static">Static Box</div>
+  <p>🟣 Default position — stays in normal document flow.</p>
+</figure>
+
+<figure>
+  <figcaption>2️⃣ position: relative</figcaption>
+  <div class="box relative">Relative Box</div>
+  <p>🟢 Moves 10px down and 20px right, but space remains reserved.</p>
+</figure>
+
+<figure class="container">
+  <figcaption>3️⃣ position: absolute (inside container)</figcaption>
+  <div class="box absolute">Absolute Box</div>
+  <p>🟡 Positioned relative to the nearest ancestor with position (this container).</p>
+</figure>
+
+<figure>
+  <figcaption>4️⃣ position: fixed</figcaption>
+  <div class="box fixed">Fixed Box</div>
+  <p>🔴 Stays at the bottom-right corner even when scrolling.</p>
+</figure>
+
+<figure>
+  <figcaption>5️⃣ position: sticky</figcaption>
+  <div class="box sticky">Sticky Box</div>
+  <p>🔵 Acts like relative until scrolled, then sticks to the top.</p>
+  <div class="spacer"></div>
+</figure>
+
+</body>
+</html>

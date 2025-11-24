@@ -9,7 +9,7 @@
 // console.log("3. select seats");
 // console.log("4. Tickect Booked");
 
-// //Aysc 
+// Aysc 
 
 // setTimeout(()=> {
 // console.log("1. Open Book my Show");

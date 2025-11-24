@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background: #000430;
+    --secondaryBackground: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #23feee;
+}
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 120px;
+    margin: 120px auto 0 auto;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+.stats-container{
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+}
+.details{
+    width: 100%;
+    
+}
+#progressBar{
+     width: 100%;
+     height: 10px;
+     background-color: var(--secondaryBackground);
+     border-radius: 5px;
+     margin-top: 20px;
+}
+#progress{
+    width: 0%;
+    height: 8px;
+    background-color: #23feee;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+#numbers{
+    width: 100px;
+    height: 100px;
+    background-color:var(--purple);
+    border-radius: 50%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 30px;
+    flex-wrap: wrap;
+}
+form{
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    gap:10px;
+}
+input{
+    flex: 1;
+    padding: 16px;
+    background: var(--secondaryBackground);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+}
+button{
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--purple);
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+}
+#task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+}
+.taskItem {
+    display: flex;
+    background-color: #171c48;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+}
+.task{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.task input{
+    width: 25px;
+    height: 20px;
+}
+.completed p {
+    text-decoration: line-through;
+    color: var(--teal);
+}
+.icons {
+    width: 40px;
+    height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
